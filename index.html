@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>9 Monedas</title>
+</head>
+<body>
+    <nav>
+        <div class="img-nav">
+            <div>⚖️ 9 Monedas</div>
+        </div>
+    </nav>
+    <div id="problema">
+        <p class="text">
+            <b>IMPORTANTE: SOLO FUNCIONA EN PC</b> <br><br>
+            
+            El desafío consiste en identificar cuál de las <b>9</b> monedas es la más pesada de todas,
+            utilizando <b>únicamente 2 oportunidades</b> de pesar, 
+            es fundamental encontrar una estrategia que nos permita 
+            descubrir la moneda más pesada utilizando únicamente estas dos oportunidades de pesar en la balanza
+        </p>
+        <div id="reglas">
+            <h5>Reglas:</h5>
+            <ol>
+                <li>Click izquierdo movera la moneda a la izquierda</li>
+                <li>Click derecho movera la moneda a la derecha</li>
+                <li>Click izquierdo, sobre una moneda a la izquierda, volvera arriba</li>
+                <li>Click derecho, sobre una moneda a la derecha, volvera arriba</li>
+                <li>Hechos tus 2 intentos, hacer Click derecho movera la moneda seleccionana validacion, hacer click en "Validar" para verificar tu respuesta.</li>
+                <li>Hacer Click derecho sobre la moneda en validar la regresara arriba</li>
+            </ol>
+        </div>
+        <div>
+            <input type="button" value="Skip >>>" onclick="skip()">
+        </div>
+    </div>
+    
+    <div class="contenedor">
+        <div id="banca">
+
+        </div>
+        <div id="mesa">
+            <div id="left" class="pesa">
+
+            </div>
+            <div id="right" class="pesa">
+
+            </div>
+        </div>
+        <div>
+            <input type="button" value="Comparar" onclick="comparar()">
+        </div>
+    </div>
+    <div id="val-contenedor">
+
+        <a onclick="reintentar()" id="reiniciar" title="Reiciciar">🔃</a>
+        <div id="validador">
+ 
+        </div>
+            <input type="button" value="Validar" onclick="validar()">
+            <p id="p1"> Rojo : Pesado</p>
+            <p id="p2"> Verde : Ligero</p>
+            <p id="p3"> Azul : Iguales</p>
+            <p id="p4"> intentos: <b id="contador">0</b></p>
+        </div>
+    <div id="resultado">
+        PERDISTE
+        <input type="button" value="Reintentar" onclick="reintentar()" class="reintentar">
+    </div>
+    <footer>
+        <div>Autor: Jorge Cárcamo Caucamán</div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
